@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Montserrat", sans-serif;
+      background-color: #ffffff;
+      color: #333;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 44px;
+      line-height: 48.4px;
+      letter-spacing: 0.44px;
+      padding: 20px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .faq-container {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #f4f4f4;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .faq {
+      padding: 16px;
+      border-bottom: 1px solid #ddd;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .faq .question {
+      padding: 5px 0px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: black;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .faq .question i {
+      transition: transform 0.3s, color 0.3s, background-color 0.3s;
+      color: #333;
+      background-color: #ddd;
+      border-radius: 50%;
+      padding: 10px; /* Adjusted for better roundness */
+      font-size: 10px; /* Adjusted for larger arrow icon */
+      width: 25px; /* Fixed width for circle */
+      height: 25px; /* Fixed height for circle */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .faq .question:hover i {
+      color: #fff;
+      background-color: #000;
+    }
+
+    .faq .answer {
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
+      transition: max-height 0.4s ease, opacity 0.4s ease;
+    }
+
+    .faq.active .question i {
+      transform: rotate(180deg);
+    }
+
+    .faq .answer p {
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+
+    .faq .answer p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Remove the border-bottom for the last FAQ item */
+    .faq:last-child {
+      border-bottom: none;
+    }
+
+    .store-hours {
+      text-align: center;
+      margin: 40px auto 0;
+      font-size: 16px;
+      color: #555;
+      font-weight: 500;
+      max-width: 800px;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+
+      .faq-container {
+        padding: 15px;
+      }
+
+      .faq {
+        padding: 14px;
+      }
+
+      .faq .question {
+        font-size: 1rem;
+      }
+
+      .faq .answer {
+        font-size: 15px;
+        line-height: 1.5;
+      }
+
+      .store-hours {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 30px;
+        padding: 10px;
+      }
+
+      .faq-container {
+        padding: 10px;
+      }
+
+      .faq {
+        padding: 12px;
+      }
+
+      .faq .question {
+        font-size: 0.9rem;
+      }
+
+      .faq .answer {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .store-hours {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Frequently Asked Questions</h1>
+
+  <div class="faq-container">
+
+    <div class="faq">
+      <div class="question">
+        <p>Shipping and handling fees</p>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="answer">
+        <p>We ship all our orders to France with La Poste. Do you order before 11:00 PM? Your package will be sent for free the next day. This way, you will receive your order quickly and without additional costs!</p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="question">
+        <p>Returns & Exchanges</p>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="answer">
+        <p>Are you not completely satisfied? Don't worry! You can easily and quickly return your order within 30 days of receiving it. We will ensure that the process goes smoothly so you don't have to worry.</p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="question">
+        <p>Size & Fit</p>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="answer">
+        <p>Our clothing is exactly true to the size indicated in the size chart. You will find the size chart next to each product so that you can always choose the right size and ensure it fits you perfectly.</p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="question">
+        <p>Still Have Questions?</p>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="answer">
+        <p>Do you have a question or need advice? Don't hesitate to contact us. We are here to help and advise you.</p>
+        <p>Email: <a href="mailto:info@luva-moda.com">info@luva-moda.com</a></p>
+        <p>Mon–Fri 09:00 - 17:00</p>
+        <p>Sat–Sun 10:00 - 17:00</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="store-hours">
+    Our store is open Mon–Fri 09:00 - 17:00 & Sat/Sun 10:00 - 17:00.<br>
+    Response within 8 hours
+  </div>
+
+  <script>
+    const faqs = document.querySelectorAll('.faq');
+
+    faqs.forEach(faq => {
+      const answer = faq.querySelector('.answer');
+
+      faq.querySelector('.question').addEventListener('click', () => {
+        faqs.forEach(item => {
+          const itemAnswer = item.querySelector('.answer');
+          if (item !== faq) {
+            item.classList.remove('active');
+            itemAnswer.style.maxHeight = null;
+            itemAnswer.style.opacity = 0;
+          }
+        });
+
+        faq.classList.toggle('active');
+
+        if (faq.classList.contains('active')) {
+          answer.style.maxHeight = answer.scrollHeight + "px";
+          answer.style.opacity = 1;
+        } else {
+          answer.style.maxHeight = null;
+          answer.style.opacity = 0;
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
